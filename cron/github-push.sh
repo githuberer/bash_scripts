@@ -9,7 +9,7 @@ logfile=/var/log/cron/${0##*/}.log
 dir=( "/home/wyy/vim_conf"
       "/home/wyy/conf_file"
       "/home/wyy/bash_functions"
-      "/var/www/cgi-bin/sync_mc_or_music"
+      "/home/wyy/sync_sql_table"
       )
 
 main_func()
