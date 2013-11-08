@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-#https://www.dropbox.com/s/9ev0nk8w9z8lf7p/install_of_cent6.4.sh
 
 set -e 
 set -x 
