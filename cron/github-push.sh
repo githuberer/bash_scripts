@@ -10,8 +10,8 @@ logfile=/var/log/cron/${0##*/}.log
 dir=( "/home/wyy/vim_conf"
       "/home/wyy/conf_file"
       "/home/wyy/bash_functions"
-      "/home/wyy/sync_sql_table"
 )
+#      "/home/wyy/sync_sql_table"
 
 main_func()
 {
