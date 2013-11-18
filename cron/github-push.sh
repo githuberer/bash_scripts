@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-. /home/wyy/bash_functions/script/script-variable.sh
+. /home/wyy/bash_functions/script-variable.sh
 . /home/wyy/bash_functions/script/func-tmstamp.sh
 . /home/wyy/bash_functions/system/func-gitall.sh
 . /home/wyy/bash_functions/script/func-log22file.sh
