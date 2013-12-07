@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-. /home/wyy/Dropbox/script/env_script.sh
+. /home/wyy/bash_functions/script-variable.sh
 
 logfile=/var/log/cron/${0##*/}.log
 

@@ -12,8 +12,12 @@ dir=(
       "/home/wyy/sync_sql_table"
       "/home/wyy/conf_file"
       "/home/wyy/bash_functions"
+<<<<<<< HEAD
       "/home/wyy/emacs.d"
+=======
+>>>>>>> e3ec617bc31e588b2bd5127dede5cf62b82e914d
 )
+#      "/home/wyy/sync_sql_table"
 
 main_func()
 {
