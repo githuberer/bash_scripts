@@ -8,16 +8,13 @@
 logfile=/var/log/cron/${0##*/}.log
 
 dir=(
-      "/home/wyy/vim_conf"
-      "/home/wyy/sync_sql_table"
+      "/home/wyy/emacs.d"
+      "/home/wyy/conf_vim"
       "/home/wyy/conf_file"
       "/home/wyy/bash_functions"
-<<<<<<< HEAD
-      "/home/wyy/emacs.d"
-=======
->>>>>>> e3ec617bc31e588b2bd5127dede5cf62b82e914d
+      "/home/wyy/bash_scripts"
+      "/home/wyy/sync_sql_table"
 )
-#      "/home/wyy/sync_sql_table"
 
 main_func()
 {
