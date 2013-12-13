@@ -2,13 +2,13 @@
 
 scriptname=$(basename $0)
 logfile=/u/logs/${scriptname/.sh/.log}
-files="find /usr/local/nginx/logs -name '*.log' -size  +100M |paste -s -d ' '"
+files=$(find /usr/local/nginx/logs -name '*.log' -size  +100M |paste -s -d ' ')
 
 main_func()
 {
   for fff in $files
   do
-    if tail -v -c 100000K $fff > $fff.old
+    if tail -v -c 50000K $fff > $fff.old
     then
       echo -e "\n\n
       ==========================================
