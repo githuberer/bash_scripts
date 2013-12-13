@@ -12,7 +12,7 @@ main_func()
     then
       echo -e "\n\n
       ==========================================
-      date +%Y-%m-%d_%H:%M:%S
+      $(date +%Y-%m-%d_%H:%M:%S)
       ==========================================
       Split file and zero it
       original:  $fff
