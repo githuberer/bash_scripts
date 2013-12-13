@@ -23,8 +23,6 @@ main_func()
 }  
 
 
-[[ -d $logfile ]] || mkdir -p $logfile
-
 if [[ -n $TERM ]]
 then
   main_func 2>&1 | tee -a $logfile
