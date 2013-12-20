@@ -26,8 +26,8 @@ chkconfig network on
 
 
 # ---------------
-mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.backup
-cd /etc/yum.repos.d && wget http://mirrors.163.com/.help/CentOS6-Base-163.repo
+#mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.backup
+#cd /etc/yum.repos.d && wget http://mirrors.163.com/.help/CentOS6-Base-163.repo
 rpm -Uvh http://mirrors.yun-idc.com/epel/6/x86_64/epel-release-6-8.noarch.rpm
 
 
