@@ -50,35 +50,36 @@ cat >> /root/.vimrc <<EOF
 
 "added by WYY below :
 
-" fileencodings for  sucking windows users
-let &termencoding=&encoding
-set fileencodings=utf-8,gb18030,gbk,gb2312,big5
 
-set nu
-set hlsearch
-set t_Co=256
+syntax enable
 colorscheme jellybeans
 
-syntax on
+
+syntax on                   
 filetype on
+filetype indent on
 filetype plugin on
-filetype plugin indent on
 
-"maps for moving within splitting windows
-map <c-j> <c-w>j
-map <c-k> <c-w>k
-map <c-l> <c-w>l
-map <c-h> <c-w>h
+set nu                        "Auto line num
+set hlsearch                  "Highlight Searching
+set t_Co=256
+set fileencodings=utf-8,gb18030,gbk,gb2312,big5
+set nocompatible              "vim is vim not vi
+set clipboard=unnamedplus     "murge vim clipboard to system clipboard
+set mouse=a		              "Enable mouse usage (all modes)
 
-"set shiftwidth.....
-set tabstop=4 expandtab shiftwidth=2 softtabstop=2
+set autoindent                "autoindent
+set expandtab
+set tabstop=4 shiftwidth=2 softtabstop=2
+au FileType python set tabstop=8 shiftwidth=4 softtabstop=4
+
 
 EOF
 
 
 # ---------------
 [[ ! -d /root/.vim/colors/ ]] && mkdir -p /root/.vim/colors
-cd /root/.vim/colors/ && wget https://raw.github.com/githuberer/my_vim_conf/master/colors/jellybeans.vim
+cd /root/.vim/colors/ && wget https://raw.github.com/githuberer/conf_vim/master/bundle/colors-jellybeans/colors/jellybeans.vim
 # wget https://raw.github.com/githuberer/my_vim_conf/master/colors/molokai.vim
 
 # ---------------
