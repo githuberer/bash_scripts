@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+# find me here below URL:
+# wget https://raw.github.com/githuberer/bash_scripts/master/environment_init_cent6.4.sh && chmod 755 environment_init_cent6.4.sh
 
 set -e 
 set -x 
@@ -13,17 +15,18 @@ main_function()
 
 
 # ---------------
-[[ -z $(grep "biosdevname=0" /boot/grub/grub.conf) ]] && sed '/kernel/s/$/ biosdevname=0/g' /boot/grub/grub.conf
+#[[ -z $(grep "biosdevname=0" /boot/grub/grub.conf) ]] && sed '/kernel/s/$/ biosdevname=0/g' /boot/grub/grub.conf
 
 #----------------
 sed -i 's/SELINUX=enforcing/SELINUX=disabled/g' /etc/selinux/config
 sed -i 's/SELINUX=permissive/SELINUX=disabled/g' /etc/selinux/config
 # ---------------
+[[ -f /etc/init.d/NetworkManager ]] && (
 /etc/init.d/NetworkManager stop
 /etc/init.d/network restart
 chkconfig NetworkManager off
 chkconfig network on
-
+)
 
 # ---------------
 #mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.backup
@@ -66,7 +69,7 @@ set t_Co=256
 set fileencodings=utf-8,gb18030,gbk,gb2312,big5
 set nocompatible              "vim is vim not vi
 set clipboard=unnamedplus     "murge vim clipboard to system clipboard
-set mouse=a		              "Enable mouse usage (all modes)
+"set mouse=a		              "Enable mouse usage (all modes)
 
 set autoindent                "autoindent
 set expandtab
@@ -107,9 +110,9 @@ iptables -F && /etc/init.d/iptables save
 # desktop # virsh --connect qemu:///system
 # virsh # console centos
 # Use Ctrl + ] to exit the console
-echo “ttyS0″ >> /etc/securetty
-sed -i '/kernel.*quiet/s/$/ console=ttyS0/' /boot/grub/grub.conf
-echo 'S0:12345:respawn:/sbin/agetty ttyS0 115200' >> /etc/inittab
+#echo “ttyS0″ >> /etc/securetty
+#sed -i '/kernel.*quiet/s/$/ console=ttyS0/' /boot/grub/grub.conf
+#echo 'S0:12345:respawn:/sbin/agetty ttyS0 115200' >> /etc/inittab
 
 
 # ---------------
@@ -122,6 +125,7 @@ echo 'S0:12345:respawn:/sbin/agetty ttyS0 115200' >> /etc/inittab
 
 
 # ---------------
+: <<'END'
 mkdir /data/shscript/ -p
 
 cat > /data/shscript/env-bashrc.sh <<EOF
@@ -137,7 +141,7 @@ export GREP_OPTIONS='--color=always'
 EOF
 
 echo '. /data/shscript/env-bashrc.sh' >> /root/.bashrc
-
+END
 
 #---------------
 /etc/init.d/ntpd start
