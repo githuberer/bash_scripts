@@ -42,10 +42,10 @@ yum -y install vim man wget elinks nmap tree lsof tmux screen byobu postfix mail
 
 
 #---------------
-chkconfig postfix on
-chkconfig rpcidmapd off
-chkconfig rpcbind off
-chkconfig nfslock off
+[[ -f /etc/init.d/chkconfig ]] && chkconfig postfix on
+[[ -f /etc/init.d/rpcidmapd ]] && chkconfig rpcidmapd off
+[[ -f /etc/init.d/rpcbind ]] && chkconfig rpcbind off
+[[ -f /etc/init.d/nfslock ]] && chkconfig nfslock off
 
 
 # ---------------
