@@ -37,7 +37,7 @@ rpm -Uvh http://mirrors.yun-idc.com/epel/6/x86_64/epel-release-6-8.noarch.rpm
 # ---------------
 yum makecache &&\
 yum -y groupinstall Development tools &&\
-yum -y install ruby ruby-devel ruby-docs ruby-extlib ruby-irb ruby-libs &&\
+yum -y install ruby #ruby-devel ruby-docs ruby-extlib ruby-irb ruby-libs
 yum -y install vim man wget elinks nmap tree lsof tmux screen byobu postfix mailx lrzsz traceroute expect sshpass redhat-lsb realpath
 
 
@@ -73,9 +73,24 @@ set clipboard=unnamedplus     "murge vim clipboard to system clipboard
 
 set autoindent                "autoindent
 set expandtab
-set tabstop=4 shiftwidth=2 softtabstop=2
+"set tabstop=8 shiftwidth=4 softtabstop=4
 au FileType python set tabstop=8 shiftwidth=4 softtabstop=4
+au FileType sh set tabstop=8 shiftwidth=4 softtabstop=4
+au FileType ruby set tabstop=4 shiftwidth=2 softtabstop=2
 
+
+"-----------------------------"windows moving shortcut mapping
+"map <c-j> <c-w>j             
+"map <c-k> <c-w>k
+"map <c-l> <c-w>l
+"map <c-h> <c-w>h
+
+
+"-----------------------------"original <c-n> move to 'tab complete'
+map <c-l> :bn<CR> 
+map <c-h> :bp<CR> 
+map <c-b>l :bn<CR> 
+map <c-b>h :bp<CR> 
 
 EOF
 
@@ -135,8 +150,7 @@ alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
 curr_date=$(date +%Y-%m-%d)
-#apppp=/u/app
-export GREP_OPTIONS='--color=always'
+#export GREP_OPTIONS='--color=always'
 #export PATH=$PATH:/u/shscript/tomcat_init:/u/shscript/auto_upgrade_maichang
 EOF
 
