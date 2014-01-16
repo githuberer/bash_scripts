@@ -134,17 +134,16 @@ iptables -F && /etc/init.d/iptables save
 #echo 'S0:12345:respawn:/sbin/agetty ttyS0 115200' >> /etc/inittab
 
 
-# ---------------
-
-
-# rename eth1 to eth0
-#cp /etc/udev/rules.d/70-persistent-net.rules /root/70-persistent-net.rules
-#sed -i 's/NAME="eth1"/NAME="eth0/' /etc/udev/rules.d/70-persistent-net.rules
-#grep "eth1" /etc/udev/rules.d/70-persistent-net.rules | egrep -o '([[:xdigit:]]{2}[:]){5}[[:xdigit:]]{2}'
-
-
-# ---------------
 : <<'END'
+# ---------------
+# rename eth1 to eth0
+
+cp /etc/udev/rules.d/70-persistent-net.rules /root/70-persistent-net.rules
+sed -i 's/NAME="eth1"/NAME="eth0/' /etc/udev/rules.d/70-persistent-net.rules
+grep "eth1" /etc/udev/rules.d/70-persistent-net.rules | egrep -o '([[:xdigit:]]{2}[:]){5}[[:xdigit:]]{2}'
+
+
+# ---------------
 mkdir /data/shscript/ -p
 
 cat > /data/shscript/env-bashrc.sh <<EOF
