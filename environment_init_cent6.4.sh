@@ -42,7 +42,7 @@ sed -i 's/enabled=0/enabled=1/g' /etc/yum.repos.d/remi.repo
 yum makecache &&\
 yum -y groupinstall Development tools &&\
 yum -y install ruby #ruby-devel ruby-docs ruby-extlib ruby-irb ruby-libs
-yum -y install vim man wget elinks nmap tree lsof tmux screen byobu postfix mailx lrzsz traceroute expect sshpass redhat-lsb realpath
+yum -y install vim man wget elinks nmap tree lsof tmux screen byobu postfix mailx lrzsz traceroute expect sshpass redhat-lsb realpath iftop vnstat
 
 
 #---------------
