@@ -8,7 +8,6 @@ set -x
 logfile=./$(basename $0).log
 
 
-main_function()
 {
 # Installation of centos6.4 (64)
 # ( take CMD between line "-------" as one CMD Block )
@@ -164,16 +163,18 @@ END
 chkconfig ntpd on
 #---------------
 yum -y update && reboot
-}
+
+
+} | tee -a $logfile 2>&1
 
 
 
 
-
+: << "END"
 if [[ -n $TERM ]]
-then
   main_function 2>&1 | tee -a $logfile
 else
   main_function >> $logfile 2>&1
 fi
+END
 
