@@ -170,7 +170,7 @@ yum -y update && reboot
 
 
 
-: <<"END"
+: <<'END'
 if [[ -n $TERM ]]
   main_function 2>&1 | tee -a $logfile
 else
