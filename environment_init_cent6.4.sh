@@ -99,7 +99,7 @@ EOF
 
 # ---------------
 [[ ! -d /root/.vim/colors/ ]] && mkdir -p /root/.vim/colors
-( cd /root/.vim/colors/ && wget https://raw.github.com/githuberer/conf_vim/master/colors/jellybeans.vim )
+( cd /root/.vim/colors/ && wget --no-check-certificate https://raw.github.com/githuberer/conf_vim/master/colors/jellybeans.vim )
 # wget https://raw.github.com/githuberer/my_vim_conf/master/colors/molokai.vim
 
 # ---------------
