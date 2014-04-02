@@ -3,7 +3,7 @@
 #shopt -s expand_aliases
 
 export TERM="xterm-256color"
-export PATH=$PATH:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/wyy/Dropbox/script
+export PATH=$PATH:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/wyy/Dropbox/script:/home/wyy/ruby_scripts/bin
 export MAIL=/home/wyy/mail/inbox
 export EDITOR="vim"
 export VISUAL="vim"
