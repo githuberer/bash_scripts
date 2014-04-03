@@ -40,7 +40,7 @@ rpm -ivh http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.r
 yum makecache &&\
 yum -y groupinstall Development tools &&\
 yum -y install ruby #ruby-devel ruby-docs ruby-extlib ruby-irb ruby-libs
-yum -y install vim man wget elinks nmap tree lsof tmux screen byobu postfix mailx lrzsz traceroute expect openssh openssh-clients openssh-server sshpass redhat-lsb realpath iftop vnstat tcpdump vnstat
+yum -y install vim man wget elinks nmap pstree lsof tmux screen byobu postfix mailx lrzsz traceroute expect openssh openssh-clients openssh-server sshpass redhat-lsb realpath iftop vnstat tcpdump vnstat
 
 
 #---------------
