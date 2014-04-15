@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-git=(
+gitdir=(
     "/home/wyy/bash_scripts"
     "/home/wyy/ruby_scripts"
     "/home/wyy/wyying.github.io"
@@ -7,9 +7,9 @@ git=(
     "/home/wyy/Dropbox"
 )
 
-for g in "${git[@]}"
+for d in "${gitdir[@]}"
 do
-    chown -R wyy.wyy $g
+    chown -R wyy.wyy $d
 done
 
 
