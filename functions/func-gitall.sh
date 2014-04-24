@@ -13,7 +13,8 @@ func_gitall()
     git add .
 
     echo -e "\n\n==============\ngit commit -a -m \"$comment\"\n=============="
-    git commit -a -m "$comment"
+    #git commit -a -m "$comment"
+    git commit -m "$comment"
 
     echo -e "\n\n==============\ngit push\n=============="
     git push
@@ -31,7 +32,8 @@ func_gitall()
     git add .
 
     echo -e "\n\n===============\ngit commit -a -m 'NULL'\n================"
-    git commit -a -m "NULL"
+    #git commit -a -m "NULL"
+    git commit -m "NULL"
 
     echo -e "\n\n==============\ngit push\n=============="
     git push
