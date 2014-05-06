@@ -2,6 +2,9 @@
 # find me here below URL:
 # wget https://raw.github.com/githuberer/bash_scripts/master/environment_init_cent6.4.sh && chmod 755 environment_init_cent6.4.sh
 
+# Installation of centos6.4 (64)
+# Take CMD between line "#-----------" as one CMD Block
+
 set -e 
 set -x 
 
@@ -9,9 +12,6 @@ logfile=./$(basename $0).log
 
 
 {
-# Installation of centos6.4 (64)
-# ( take CMD between line "-------" as one CMD Block )
-
 
 # ---------------
 #[[ -z $(grep "biosdevname=0" /boot/grub/grub.conf) ]] && sed '/kernel/s/$/ biosdevname=0/g' /boot/grub/grub.conf
@@ -19,6 +19,7 @@ logfile=./$(basename $0).log
 #----------------
 sed -i 's/SELINUX=enforcing/SELINUX=disabled/g' /etc/selinux/config
 sed -i 's/SELINUX=permissive/SELINUX=disabled/g' /etc/selinux/config
+
 # ---------------
 [[ -f /etc/init.d/NetworkManager ]] && (
 /etc/init.d/NetworkManager stop
@@ -75,10 +76,11 @@ set clipboard=unnamedplus     "murge vim clipboard to system clipboard
 
 set autoindent                "autoindent
 set expandtab
-"set tabstop=8 shiftwidth=4 softtabstop=4
+set showcmd
 au FileType python set tabstop=8 shiftwidth=4 softtabstop=4
 au FileType sh set tabstop=8 shiftwidth=4 softtabstop=4
 au FileType ruby set tabstop=4 shiftwidth=2 softtabstop=2
+"set tabstop=8 shiftwidth=4 softtabstop=4
 
 
 "-----------------------------"windows moving shortcut mapping
@@ -167,14 +169,4 @@ yum -y update && reboot
 
 } | tee -a $logfile 2>&1
 
-
-
-
-: <<'END'
-if [[ -n $TERM ]]
-  main_function 2>&1 | tee -a $logfile
-else
-  main_function >> $logfile 2>&1
-fi
-END
 
