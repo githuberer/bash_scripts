@@ -61,7 +61,8 @@ filetype on
 filetype indent on
 filetype plugin on
 
-colorscheme jellybeans
+"colorscheme jellybeans
+colorscheme molokai
 set fileencodings=utf-8,gb18030,gbk,gb2312,big5
 set showcmd
 
@@ -99,6 +100,7 @@ EOF
 # ---------------
 [[ ! -d /root/.vim/colors/ ]] && mkdir -p /root/.vim/colors
 ( cd /root/.vim/colors/ && wget --no-check-certificate https://raw.github.com/githuberer/conf_vim/master/colors/jellybeans.vim )
+( cd /root/.vim/colors/ && wget --no-check-certificate https://raw.github.com/githuberer/conf_vim/master/colors/molokai.vim )
 
 # ---------------
 cp /etc/ssh/sshd_config /etc/ssh/sshd_config.bak
