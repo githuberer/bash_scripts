@@ -9,20 +9,20 @@ export EDITOR="vim"
 export VISUAL="vim"
 export CDPATH=$CDPATH:/home/wyy
 
-export LC_ALL="en_US.UTF-8"
-export LANG="en_US.UTF-8"
-export LANGUAGE="en_US:en"
-export LC_CTYPE=en_US.UTF-8
-export LANG=en_US.UTF-8
+#export LC_ALL="en_US.UTF-8"
+#export LANG="en_US.UTF-8"
+#export LANGUAGE="en_US:en"
+#export LC_CTYPE=en_US.UTF-8
+#export LANG=en_US.UTF-8
 #LANG="en_us 8859 1"
 
 Script=/home/wyy/Dropbox/script
 
-curr_a=$(date +%c)
-curr_d=$(date +%Y-%m-%d)
-curr_t=$(date +%H:%M)
-curr_dt=$(date +%Y-%m-%d_%H:%M)
-curr_dts=$(date +%Y-%m-%d_%H:%M:%S)
+#curr_a=$(date +%c)
+#curr_d=$(date +%Y-%m-%d)
+#curr_t=$(date +%H:%M)
+#curr_dt=$(date +%Y-%m-%d_%H:%M)
+#curr_dts=$(date +%Y-%m-%d_%H:%M:%S)
 
 alias ll='ls -l'
 alias rm='rm -i'
@@ -52,8 +52,4 @@ if [[ -n ${INSIDE_EMACS} ]]; then
     unsetopt zle
 fi
 
-# Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
 
-
-. /etc/profile.d/rvm.sh
