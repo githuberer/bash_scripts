@@ -86,7 +86,7 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 sudo -S echo -e "\n
 >> Welcome aboard, wyy !!!
 >> Automatically switch to 'root' user for using Terminal conveniently ......
-" <<< 'mint'
+" <<< 'ubuntu'
 #sudo su
 #exit
 
