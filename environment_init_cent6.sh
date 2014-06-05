@@ -98,9 +98,9 @@ EOF
 
 
 # ---------------
-[[ ! -d /root/.vim/colors/ ]] && mkdir -p /root/.vim/colors
-( cd /root/.vim/colors/ && wget --no-check-certificate https://raw.github.com/githuberer/conf_vim/master/colors/jellybeans.vim )
-( cd /root/.vim/colors/ && wget --no-check-certificate https://raw.github.com/githuberer/conf_vim/master/colors/molokai.vim )
+[[ ! -d ~/.vim/colors/ ]] && mkdir -p ~/.vim/colors
+( cd ~/.vim/colors/ && wget --no-check-certificate https://raw.github.com/githuberer/conf_vim/master/colors/jellybeans.vim )
+( cd ~/.vim/colors/ && wget --no-check-certificate https://raw.github.com/githuberer/conf_vim/master/colors/molokai.vim )
 
 # ---------------
 cp /etc/ssh/sshd_config /etc/ssh/sshd_config.bak
@@ -135,7 +135,7 @@ iptables -F && /etc/init.d/iptables save
 
 # ---------------
 # rename eth1 to eth0
-cp /etc/udev/rules.d/70-persistent-net.rules /root/70-persistent-net.rules
+cp /etc/udev/rules.d/70-persistent-net.rules ~/70-persistent-net.rules
 sed -i 's/NAME="eth1"/NAME="eth0/' /etc/udev/rules.d/70-persistent-net.rules
 grep "eth1" /etc/udev/rules.d/70-persistent-net.rules | egrep -o '([[:xdigit:]]{2}[:]){5}[[:xdigit:]]{2}'
 
