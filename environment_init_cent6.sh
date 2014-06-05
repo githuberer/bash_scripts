@@ -51,7 +51,7 @@ yum -y install vim man wget elinks nmap pstree lsof tmux byobu postfix mailx lrz
 
 
 # ---------------
-cat >> /root/.vimrc <<EOF
+cat >> ~/.vimrc <<EOF
 
 "added by WYY below :
 
