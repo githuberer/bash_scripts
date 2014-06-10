@@ -79,8 +79,8 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 #
 . ~/.rvm/scripts/rvm
 . ~/bash_scripts/system-variable.sh
-. ~/bash_scripts/system/func-gitall.sh
-. ~/bash_scripts/system/func-ssh-mysql.sh
+. ~/bash_scripts/functions/func-gitall.sh
+. ~/bash_scripts/functions/func-ssh-mysql.sh
 
 # auto switch to root
 #sudo -S echo -e "\n
