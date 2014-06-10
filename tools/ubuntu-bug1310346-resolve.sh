@@ -31,6 +31,17 @@ sudo cp -f lm_sc.t3g  /usr/lib/x86_64-linux-gnu/sunpinyin/data
 sudo cp -f pydict_sc.bin /usr/lib/x86_64-linux-gnu/sunpinyin/data
 }
 
-kill -9 $(ps -C ibus-engine-sunpinyin -o pid=)
+
+kill -9 $(ps -C ibus-engine-sunpinyin -o pid=) || echo 'ibus-sunpinyin not running!!!'
+
+
+
+echo -e "\n\n\n\n==========Messages:============"
+
+echo -e "\nOld file backup at:
+$(ls -l /usr/lib/x86_64-linux-gnu/sunpinyin/data_bak.tar)"
+
+echo -e "\nAny problem use command below to roll back: \n
+cd /usr/lib/x86_64-linux-gnu/sunpinyin/ && tar -xvf data_bak.tar"
 
 
