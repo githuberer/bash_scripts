@@ -20,17 +20,17 @@ read con; [[ $con != "Y" ]] && exit 0
 
 sudo apt-get -y install sunpinyin-utils
 
-( cd ~ && wget -O - "https://www.dropbox.com/s/estzyyrwfk9d2qv/ubuntu-bug1310346.tar.gz" | tar xzf - )
+( cd ~ && wget -O - "https://www.dropbox.com/s/4stxcgdxcfzgw7p/ubuntu-bug1310346.tar.gz" | tar xzf - )
 
-( cd /usr/lib/x86_64-linux-gnu/sunpinyin/ && tar -cvf data_bak.tar data )
+( cd /usr/lib/x86_64-linux-gnu/sunpinyin/ && sudo tar -cvf data_bak.tar data )
 
 cd ~/ubuntu-bug1310346 && {
 sudo cp -f /usr/share/doc/sunpinyin/SLM-inst.mk Makefile
 make
-cp -f lm_sc.t3g  /usr/lib/x86_64-linux-gnu/sunpinyin/data
-cp -f pydict_sc.bin /usr/lib/x86_64-linux-gnu/sunpinyin/data
+sudo cp -f lm_sc.t3g  /usr/lib/x86_64-linux-gnu/sunpinyin/data
+sudo cp -f pydict_sc.bin /usr/lib/x86_64-linux-gnu/sunpinyin/data
 }
 
-
+kill -9 $(ps -C ibus-engine-sunpinyin -o pid=)
 
 
