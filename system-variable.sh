@@ -41,6 +41,9 @@ alias aptupdate='sudo aptitude update'
 alias aptupgrade='sudo aptitude upgrade'
 
 
+#git
+alias gits='git status'
+
 # colorized man pages with less Command
 man() {
   env \
