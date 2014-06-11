@@ -27,6 +27,20 @@ alias mv='mv -i'
 #sudo vim
 alias svim='sudo vim'
 
+#debian aptitude
+alias aptsearch='sudo aptitude search'
+alias aptshow='sudo aptitude show'
+alias aptversions='sudo aptitude versions'
+
+alias aptinstall='sudo aptitude install'
+alias aptreinstall='sudo aptitude remove'
+alias aptpurge='sudo aptitude purge'
+alias aptremove='sudo aptitude remove'
+
+alias aptupdate='sudo aptitude update'
+alias aptupgrade='sudo aptitude upgrade'
+
+
 # colorized man pages with less Command
 man() {
   env \
