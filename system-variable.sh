@@ -18,16 +18,13 @@ export CDPATH=$CDPATH:/home/wyy
 
 Script=/home/wyy/Dropbox/script
 
-#curr_a=$(date +%c)
-#curr_d=$(date +%Y-%m-%d)
-#curr_t=$(date +%H:%M)
-#curr_dt=$(date +%Y-%m-%d_%H:%M)
-#curr_dts=$(date +%Y-%m-%d_%H:%M:%S)
-
+# inactive rm cp mv
 alias ll='ls -l'
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
+
+#sudo vim
 alias svim='sudo vim'
 
 # colorized man pages with less Command
