@@ -40,6 +40,10 @@ alias aptremove='sudo aptitude remove'
 alias aptupdate='sudo aptitude update'
 alias aptupgrade='sudo aptitude upgrade'
 
+#debian dpkg
+alias dpkgl='dpkg -l'
+alias dpkgi='dpkg -i'
+alias dpkgr='dpkg -r'
 
 #git
 alias gits='git status'
