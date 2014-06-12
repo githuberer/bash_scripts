@@ -3,11 +3,11 @@
 #shopt -s expand_aliases
 
 export TERM="xterm-256color"
-export PATH=$PATH:/home/wyy/Dropbox/script:/home/wyy/ruby_scripts/bin
-export MAIL=/home/wyy/mail/inbox
+export PATH=$PATH:$HOME/Dropbox/script:/home/wyy/ruby_scripts/bin
+export MAIL=$HOME/mail/inbox
 export EDITOR="vim"
 export VISUAL="vim"
-export CDPATH=$CDPATH:/home/wyy
+export CDPATH=$CDPATH:$HOME
 
 #export LC_ALL="en_US.UTF-8"
 #export LANG="en_US.UTF-8"
@@ -16,7 +16,7 @@ export CDPATH=$CDPATH:/home/wyy
 #export LANG=en_US.UTF-8
 #LANG="en_us 8859 1"
 
-Script=/home/wyy/Dropbox/script
+Script=$HOME/Dropbox/script
 
 # inactive rm cp mv
 alias ll='ls -l'
@@ -28,17 +28,17 @@ alias mv='mv -i'
 alias svim='sudo vim'
 
 #debian aptitude
-alias aptsearch='sudo aptitude search'
-alias aptshow='sudo aptitude show'
-alias aptversions='sudo aptitude versions'
+alias asearch='sudo aptitude search'
+alias ashow='sudo aptitude show'
+alias aversions='sudo aptitude versions'
 
-alias aptinstall='sudo aptitude install'
-alias aptreinstall='sudo aptitude remove'
-alias aptpurge='sudo aptitude purge'
-alias aptremove='sudo aptitude remove'
+alias ainstall='sudo aptitude install'
+alias ainstall='sudo aptitude remove'
+alias apurge='sudo aptitude purge'
+alias aremove='sudo aptitude remove'
 
-alias aptupdate='sudo aptitude update'
-alias aptupgrade='sudo aptitude upgrade'
+alias aupdate='sudo aptitude update'
+alias aupgrade='sudo aptitude upgrade'
 
 #debian dpkg
 alias dpkgl='sudo dpkg -l'
