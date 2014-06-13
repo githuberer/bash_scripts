@@ -46,7 +46,7 @@ Swap使用情况,"总大小共计$(free -m|grep 'Swap:'|awk '{print $2}')M, 剩�
 
 虚拟逻辑卷状态,"$(lvs)"
 
-/var/log/message最近1000行的错误信息(无错误则空),"$(test -f /var/log/message && tail -n 1000 /var/log/messages|grep -E 'error|warning|fail')"
+/var/log/message最近1000行的错误信息(该文件不存在或者无错误则空),"$(test -f /var/log/message && tail -n 1000 /var/log/messages|grep -E 'error|warning|fail')"
 
 EOF
 
