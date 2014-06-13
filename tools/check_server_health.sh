@@ -8,7 +8,7 @@ file1="massages_utf8.csv"
 file2="massages_gbk.csv"
 filetar="check_health_$(hostname).tar"
 
-echo -e "\n\n\nStart collect system health messages....\n\n\n"
+echo -e "\e32m\n\n\nStart collect system health messages....\n\n\n\e[0m"
 
 cat > $file1 <<EOF
 
@@ -50,18 +50,21 @@ Swap使用情况,"总大小共计$(free -m|grep 'Swap:'|awk '{print $2}')M, 剩�
 
 EOF
 
-echo -en "\n\n\n\n\n\n\nCollection is over. Convert utf8 file content to gbk..."
+echo -e "\e[32m\n\n\n\n\n\n\nCollection is over.\e[0m"
+
+echo -en "\n\nConvert utf8 file content to gbk..."
+
 iconv -f utf8 -t gbk $file1 -o $file2
-echo "Done"
+echo -e "\e[32mDone\e[0m"
 
 
-echo "
-
+echo -e "
+\e[31m
 Would you like to tar the $file1 and $file2 and then rm them ?
-
 --------------------------
 type in uppercase 'Y' to tar file, otherwise skip the tar course and continue...
 --------------------------
+\e[0m
 "
 
 read con
@@ -70,10 +73,10 @@ read con
 if [[ $con == "Y" ]]
 then
     tar -cvf $filetar $file1 $file2 && rm $file1 $file2
-    echo -e "\n\n\nCongratulation!!! Everything is done! Please check file: $filetar\n\n\n"
+    echo -e "\e[32m\n\n\nCongratulation!!! Everything is done! Please check file: $filetar\n\n\n\e[0m"
 else
 
-    echo -e "\n\n\nCongratulation!!! Everything is done! Please check files: $file1 $file2\n\n\n"
+    echo -e "\e[32m\n\n\nCongratulation!!! Everything is done! Please check files: $file1 $file2\n\n\n\e[0m"
 fi
 
 
