@@ -68,8 +68,6 @@ type in uppercase 'Y' to tar file, otherwise skip the tar course and continue...
 "
 
 read con
-
-
 if [[ $con == "Y" ]]
 then
     tar -cvf $filetar $file1 $file2 && rm $file1 $file2
