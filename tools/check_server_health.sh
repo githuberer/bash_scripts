@@ -4,8 +4,8 @@
 
 set -e
 
-file1="massages_utf8.csv"
-file2="massages_gbk.csv"
+file1="messages_utf8.csv"
+file2="messages_gbk.csv"
 filetar="check_health_$(hostname).tar"
 
 echo -e "\e32m\n\n\nStart collect system health messages....\n\n\n\e[0m"
