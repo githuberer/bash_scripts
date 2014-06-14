@@ -1,15 +1,69 @@
 #!/usr/bin/env bash
+#
+# This script is used to collect linux system health messages.
+#
+#
+# Find and view it at link here:
+# https://github.com/wyying/bash_scripts/blob/master/tools/check_server_health.sh
+#
+# Download and update it at link here:
+# https://raw.githubusercontent.com/wyying/bash_scripts/master/tools/check_server_health.sh
+#
+#
+#
+# The MIT License (MIT)
+#
+# Copyright (c) 2014 WangYanying
+#
+# Permission is hereby granted, free of charge, to any person obtaining a copy of
+# this software and associated documentation files (the "Software"), to deal in
+# the Software without restriction, including without limitation the rights to
+# use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+# the Software, and to permit persons to whom the Software is furnished to do so,
+# subject to the following conditions:
+#
+# The above copyright notice and this permission notice shall be included in all
+# copies or substantial portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+# FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+# COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+# IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+# CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+#
+#
+#
+#
+#
 
-# this file is used to collect linux system health messages.
 
-set -e
+#set -e
 
-file1="messages_utf8.csv"
-file2="messages_gbk.csv"
-filetar="check_health_$(hostname).tar"
+TMOUT=15
 
-echo -e "\e32m\n\n\nStart collect system health messages....\n\n\n\e[0m"
+time=$(date +%Y%m%d)
+file1="messages_utf8_$time.csv"
+file2="messages_gbk_$time.csv"
+filetar="check_health_$(hostname)_$time.tar"
 
+
+
+if [[ $(whoami) != "root" ]]
+then
+    echo -e "\n
+    \e[31m
+    Please run this shell script as root user, exit now!!!
+    \e[0m
+    \n"
+
+    false
+    exit 1
+fi
+
+
+
+echo -e "\e[32m\n\n\nStart to collect system health messages....\n\n\n\e[0m"
 cat > $file1 <<EOF
 
 项目,检查结果,备注
@@ -49,35 +103,39 @@ Swap使用情况,"总大小共计$(free -m|grep 'Swap:'|awk '{print $2}')M, 剩�
 /var/log/message最近1000行的错误信息(该文件不存在或者无错误则空),"$(test -f /var/log/message && tail -n 1000 /var/log/messages|grep -E 'error|warning|fail')"
 
 EOF
+echo -e "\e[32m\nCollection is over.\e[0m"
 
-echo -e "\e[32m\n\n\n\n\n\n\nCollection is over.\e[0m"
 
-echo -en "\n\nConvert utf8 file content to gbk..."
 
+
+echo -en "\n\n\n\e[32mConvert encoding of result file from utf8 to gbk... \e[0m"
 iconv -f utf8 -t gbk $file1 -o $file2
 echo -e "\e[32mDone\e[0m"
 
 
-echo -e "
+
+
+echo -e "\n\n\n
 \e[31m
-Would you like to tar the $file1 and $file2 and then rm them ?
+Would you like to tar the result files \"$file1\" \"$file2\" and then remove them ?\n
 --------------------------
-type in uppercase 'Y' to tar file, otherwise skip the tar course and continue...
+To tar files please type in uppercase \"Y\" within \"$TMOUT\" seconds, otherwise skip the tar course and continue...
 --------------------------
 \e[0m
 "
-
 read con
 if [[ $con == "Y" ]]
 then
     tar -cvf $filetar $file1 $file2 && rm $file1 $file2
-    echo -e "\e[32m\n\n\nCongratulation!!! Everything is done! Please check file: $filetar\n\n\n\e[0m"
+    echo -e "\e[32m\n\n\nCONGRATULATION!!! EVERYTHING IS DONE!\n\n\n\e[0m
+        Please check the result files:\n 
+        \"$(readlink -f $filetar)\"\n\n\n"
 else
-
-    echo -e "\e[32m\n\n\nCongratulation!!! Everything is done! Please check files: $file1 $file2\n\n\n\e[0m"
+    echo -e "\e[32m\n\n\nCONGRATULATION!!! EVERYTHING IS DONE!\n\n\n\e[0m
+        Please check the result files:\n 
+        \"$(readlink -f $file1)\" 
+        \"$(readlink -f $file2)\"\n\n\n"
 fi
-
-
 
 
 
