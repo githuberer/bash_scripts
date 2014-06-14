@@ -21,20 +21,36 @@ SCRIPT=$HOME/Dropbox/script
 
 ### alias #######################################
 
-# system sudo cmd
+# git
+alias gall='func_gitall'
+alias gal='func_gitall'
+
+alias gstatus='git status'
+alias gstt='git status'
+
+alias gpull='git pull'
+alias gpl='git pull'
+
+alias gpush='git push'
+alias gph='git push'
+
+alias gaddA='git add -A .'
+alias gaa='git add -A .'
+
+alias gcommitM='git commit -m'
+alias gcm='git commit -m'
+
+alias gcommitMA='git commit -m -a'
+alias gcma='git commit -m -a'
+
+alias gcheckout='git checkout'
+alias gckt='git checkout'
+
+# process manage
 alias ps='sudo ps'
 alias netstat='sudo netstat'
 alias lsof='sudo lsof'
 alias kill='sudo kill'
-
-# colorized ri
-alias ri='ri -f ansi'
-
-#sudo vim
-alias svim='sudo vim'
-
-#sudo last command
-alias slcmd='sudo ${history[${#history}]}'
 
 # lvm
 alias lvs='sudo lvs'
@@ -51,20 +67,41 @@ alias mv='mv -i'
 
 #debian aptitude
 alias asearch='sudo aptitude search'
+alias asch='sudo aptitude search'
+
 alias ashow='sudo aptitude show'
 alias aversions='sudo aptitude versions'
+
 alias ainstall='sudo aptitude install'
+alias ain='sudo aptitude install'
+
 alias aremove='sudo aptitude remove'
 alias apurge='sudo aptitude purge'
-alias aremove='sudo aptitude remove'
+
 alias aupdate='sudo aptitude update'
+alias aup='sudo aptitude update'
+
 alias aupgrade='sudo aptitude upgrade'
+alias aupde='sudo aptitude upgrade'
 
 #debian dpkg
 alias dplist='sudo dpkg -l'
-alias dpinstall='sudo dpkg -i'
-alias dpremove='sudo dpkg -r'
+alias dls='sudo dpkg -l'
 
+alias dpinstall='sudo dpkg -i'
+alias din='sudo dpkg -i'
+
+alias dpremove='sudo dpkg -r'
+alias drm='sudo dpkg -r'
+
+# colorized ri
+alias ri='ri -f ansi'
+
+#sudo vim
+alias svim='sudo vim'
+
+#sudo last command
+alias slcmd='sudo ${history[${#history}]}'
 
 
 ### others ####################################
