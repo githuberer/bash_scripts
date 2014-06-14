@@ -21,6 +21,12 @@ SCRIPT=$HOME/Dropbox/script
 
 ### alias #######################################
 
+# system sudo cmd
+alias ps='sudo ps'
+alias netstat='sudo netstat'
+alias lsof='sudo lsof'
+alias kill='sudo kill'
+
 # colorized ri
 alias ri='ri -f ansi'
 
