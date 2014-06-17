@@ -34,6 +34,7 @@ alias rgc='rails generate controller'
 alias rgm='rails generate model'
 alias rs='rails server'
 alias rsh='rails server -h'
+alias vroute='reroute'
 reroute () # rails edit config/routes.rb
 {
     if [[ -x bin/rails ]]
@@ -139,8 +140,8 @@ alias drm='sudo dpkg -r'
 alias ri='ri -f ansi'
 
 #sudo vim
-alias i='vim'
-alias si='sudo vim'
+alias v='vim'
+alias sv='sudo vim'
 
 #sudo last command
 alias slcmd='sudo ${history[${#history}]}'
