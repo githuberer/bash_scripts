@@ -37,7 +37,9 @@
 #
 #
 
-
+# zsh
+plugins=(git)
+plugins=(rails)
 
 ### variables ###################################
 
