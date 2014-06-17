@@ -175,7 +175,9 @@ alias drm='sudo dpkg -r'
 alias ri='ri -f ansi'
 
 #sudo vim
+alias v='vim'
 alias svim='sudo vim'
+alias sv='sudo vim'
 
 #sudo last command
 alias slcmd='sudo ${history[${#history}]}'
