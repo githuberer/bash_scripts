@@ -65,6 +65,7 @@ alias rgc='rails generate controller'
 alias rgm='rails generate model'
 alias rs='rails server'
 alias rsh='rails server -h'
+alias vimrte='reroute'
 reroute () # rails edit config/routes.rb
 {
     if [[ -x bin/rails ]]
@@ -197,5 +198,24 @@ if [[ -n ${INSIDE_EMACS} ]]; then
     prompt walters
     unsetopt zle
 fi
+
+
+__FILE__=$(readlink -f $0)
+VIRHOME=$(dirname $__FILE__)
+. $HOME/.rvm/scripts/rvm
+. $VIRHOME/functions/func-gitall.sh
+. $VIRHOME/functions/func-ssh-mysql.sh
+unset __FILE__
+unset VIRHOME
+
+
+# auto switch to root
+#sudo -S echo -e "\n
+echo -e "\n>> Welcome aboard, $(whoami) !!!\n"
+#>> Automatically type in password for using Terminal conveniently ......
+#" <<< 'ubuntu'
+#>> Automatically switch to 'root' user for using Terminal conveniently ......
+#sudo su
+#exit
 
 
