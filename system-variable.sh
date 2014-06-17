@@ -60,6 +60,10 @@ SCRIPT=$HOME/Dropbox/script
 
 ### alias #######################################
 
+# rails
+alias rgc='rails generate controller'
+alias rgm='rails generate controller'
+
 # git
 alias gall='func_gitall'
 alias gal='func_gitall'
