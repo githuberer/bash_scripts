@@ -63,7 +63,18 @@ SCRIPT=$HOME/Dropbox/script
 # rails
 alias rgc='rails generate controller'
 alias rgm='rails generate model'
-alias vimrte='vim config/routes.erb'
+reroute () # rails edit config/routes.rb
+{
+    if [[ -x bin/rails ]]
+    then
+        $EDITOR config/routes.rb
+    elif [[ -x ../bin/rails ]]
+    then
+        $EDITOR ../config/routes.rb
+    else
+        echo -e "\e[31m Get into Rails app first, please.\e[0m"
+    fi
+}
 
 # git
 alias gall='func_gitall'
