@@ -37,9 +37,11 @@
 #
 #
 
-# zsh
-plugins=(git)
-plugins=(rails)
+### zsh ###################################
+export ZSH=$HOME/.oh-my-zsh
+ZSH_THEME="robbyrussell"
+plugins=(git rails)
+source $ZSH/oh-my-zsh.sh
 
 ### variables ###################################
 
