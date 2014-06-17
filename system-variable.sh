@@ -113,7 +113,10 @@ alias asearch='sudo aptitude search'
 alias asch='sudo aptitude search'
 
 alias ashow='sudo aptitude show'
+alias ashw='sudo aptitude show'
+
 alias aversions='sudo aptitude versions'
+alias avsn='sudo aptitude versions'
 
 alias ainstall='sudo aptitude install'
 alias ain='sudo aptitude install'
@@ -125,7 +128,7 @@ alias aupdate='sudo aptitude update'
 alias aup='sudo aptitude update'
 
 alias aupgrade='sudo aptitude upgrade'
-alias aupde='sudo aptitude upgrade'
+alias aupgd='sudo aptitude upgrade'
 
 #debian dpkg
 alias dplist='sudo dpkg -l'
