@@ -67,7 +67,7 @@ alias rgc='rails generate controller'
 alias rgm='rails generate model'
 alias rs='rails server'
 alias rsh='rails server -h'
-alias vimrte='reroute'
+alias vimroute='reroute'
 reroute () # rails edit config/routes.rb
 {
     if [[ -x bin/rails ]]
@@ -77,7 +77,7 @@ reroute () # rails edit config/routes.rb
     then
         $EDITOR ../config/routes.rb
     else
-        echo -e "\e[31m Get into Rails app first, please.\e[0m"
+        echo -e "\e[31m Get into a Rails app first, please.\e[0m"
     fi
 }
 devlog () #
