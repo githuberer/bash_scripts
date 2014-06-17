@@ -32,27 +32,21 @@ SCRIPT=$HOME/Dropbox/script
 # rails
 alias rgc='rails generate controller'
 alias rgm='rails generate model'
-
 alias rs='rails server'
 alias rsh='rails server -h'
-
-alias vimroute='reroute'
-alias iroute='reroute'
-alias vroute='reroute'
-reroute () # rails edit config/routes.rb
+alias devlog='devlognew'
+riroute () # rails edit config/routes.rb
 {
     if [[ -x bin/rails ]]
     then
-        $EDITOR config/routes.rb
+        vim config/routes.rb
     elif [[ -x ../bin/rails ]]
     then
-        $EDITOR ../config/routes.rb
+        vim ../config/routes.rb
     else
         echo -e "\e[31m Get into a Rails app first, please.\e[0m"
     fi
 }
-
-alias devlog='devlognew'
 devlognew () #
 {
     if [[ -x bin/rails ]]
