@@ -63,7 +63,7 @@ SCRIPT=$HOME/Dropbox/script
 # rails
 alias rgc='rails generate controller'
 alias rgm='rails generate model'
-alias vimrte='vim config/route.erb'
+alias vimrte='vim config/routes.erb'
 
 # git
 alias gall='func_gitall'
