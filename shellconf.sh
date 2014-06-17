@@ -70,6 +70,7 @@ alias rgm='rails generate model'
 alias rs='rails server'
 alias rsh='rails server -h'
 alias vimroute='reroute'
+alias iroute='reroute'
 alias vroute='reroute'
 reroute () # rails edit config/routes.rb
 {
@@ -177,6 +178,7 @@ alias ri='ri -f ansi'
 
 #sudo vim
 alias v='vim'
+alias i='vim'
 alias svim='sudo vim'
 alias sv='sudo vim'
 
