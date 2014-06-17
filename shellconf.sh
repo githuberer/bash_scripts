@@ -70,6 +70,7 @@ alias rgm='rails generate model'
 alias rs='rails server'
 alias rsh='rails server -h'
 alias vimroute='reroute'
+alias vroute='reroute'
 reroute () # rails edit config/routes.rb
 {
     if [[ -x bin/rails ]]
