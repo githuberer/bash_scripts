@@ -128,7 +128,7 @@ alias aupgd='sudo aptitude upgrade'
 
 #debian dpkg
 alias dplist='sudo dpkg -l'
-alias dls='sudo dpkg -l'
+alias dpl='sudo dpkg -l'
 
 alias dpinstall='sudo dpkg -i'
 alias din='sudo dpkg -i'
