@@ -142,6 +142,7 @@ alias ri='ri -f ansi'
 #sudo vim
 alias v='vim'
 alias sv='sudo vim'
+alias svim='sudo vim'
 
 #sudo last command
 alias slcmd='sudo ${history[${#history}]}'
