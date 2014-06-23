@@ -61,28 +61,20 @@ rdevlog () #
 }
 
 # git
-alias gall='func_gitall'
 alias gal='func_gitall'
 
-alias gstatus='git status'
 alias gstt='git status'
 
-alias gpull='git pull'
 alias gpl='git pull'
 
-alias gpush='git push'
 alias gph='git push'
 
-alias gaddA='git add -A .'
 alias gaa='git add -A .'
 
-alias gcommitM='git commit -m'
 alias gcm='git commit -m'
 
-alias gcommitMA='git commit -m -a'
 alias gcma='git commit -m -a'
 
-alias gcheckout='git checkout'
 alias gckt='git checkout'
 
 # process manage
@@ -105,35 +97,23 @@ alias cp='cp -i'
 alias mv='mv -i'
 
 #debian aptitude
-alias asearch='sudo aptitude search'
 alias asch='sudo aptitude search'
 
-alias ashow='sudo aptitude show'
 alias ashw='sudo aptitude show'
 
-alias aversions='sudo aptitude versions'
 alias avsn='sudo aptitude versions'
 
-alias ainstall='sudo aptitude install'
 alias ain='sudo aptitude install'
 
-alias aremove='sudo aptitude remove'
-alias apurge='sudo aptitude purge'
+alias arm='sudo aptitude remove'
+alias apg='sudo aptitude purge'
 
-alias aupdate='sudo aptitude update'
 alias aup='sudo aptitude update'
-
-alias aupgrade='sudo aptitude upgrade'
 alias aupgd='sudo aptitude upgrade'
 
 #debian dpkg
-alias dplist='sudo dpkg -l'
 alias dpl='sudo dpkg -l'
-
-alias dpinstall='sudo dpkg -i'
 alias din='sudo dpkg -i'
-
-alias dpremove='sudo dpkg -r'
 alias drm='sudo dpkg -r'
 
 # colorized ri
