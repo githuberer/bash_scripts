@@ -62,19 +62,12 @@ rdevlog () #
 
 # git
 alias gal='func_gitall'
-
 alias gstt='git status'
-
 alias gpl='git pull'
-
 alias gph='git push'
-
 alias gaa='git add -A .'
-
 alias gcm='git commit -m'
-
 alias gcma='git commit -m -a'
-
 alias gckt='git checkout'
 
 # process manage
@@ -98,16 +91,11 @@ alias mv='mv -i'
 
 #debian aptitude
 alias asch='sudo aptitude search'
-
 alias ashw='sudo aptitude show'
-
 alias avsn='sudo aptitude versions'
-
 alias ain='sudo aptitude install'
-
 alias arm='sudo aptitude remove'
 alias apg='sudo aptitude purge'
-
 alias aup='sudo aptitude update'
 alias aupgd='sudo aptitude upgrade'
 
