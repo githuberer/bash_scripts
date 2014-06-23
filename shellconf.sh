@@ -29,6 +29,7 @@ SCRIPT=$HOME/Dropbox/script
 
 ### alias #######################################
 
+
 # rails
 alias rgc='rails generate controller'
 alias rgm='rails generate model'
@@ -71,6 +72,7 @@ alias gcma='git commit -m -a'
 alias gckt='git checkout'
 
 # process manage
+alias reboot='sudo reboot'
 alias ps='sudo ps'
 alias netstat='sudo netstat'
 alias lsof='sudo lsof'
