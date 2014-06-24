@@ -71,11 +71,11 @@ alias gcm='git commit -m'
 alias gcma='git commit -m -a'
 alias gckt='git checkout'
 
-# process manage
+# system admin
 alias reboot='sudo reboot'
 alias kill='sudo kill'
 alias ps='sudo ps'
-alias ps='sudo ps'
+alias pscmd='ps -eo command --sort command'
 alias iftop='sudo iftop'
 alias iptraf='sudo iptraf'
 alias nethogs='sudo nethogs'
