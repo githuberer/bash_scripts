@@ -82,6 +82,7 @@ alias nethogs='sudo nethogs'
 alias top='sudo top'
 alias atop='sudo atop'
 alias netstat='sudo netstat'
+alias netstatainet='sudo netstat -anp --inet'
 alias lsof='sudo lsof'
 
 # lvm
