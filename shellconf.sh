@@ -73,10 +73,16 @@ alias gckt='git checkout'
 
 # process manage
 alias reboot='sudo reboot'
+alias kill='sudo kill'
 alias ps='sudo ps'
+alias ps='sudo ps'
+alias iftop='sudo iftop'
+alias iptraf='sudo iptraf'
+alias nethogs='sudo nethogs'
+alias top='sudo top'
+alias atop='sudo atop'
 alias netstat='sudo netstat'
 alias lsof='sudo lsof'
-alias kill='sudo kill'
 
 # lvm
 alias lvs='sudo lvs'
