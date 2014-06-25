@@ -14,7 +14,7 @@ unit=$(grep 'tx' $log | awk '{print $3}')
 
 if ( [[ $unit =~ "Mbit/s" ]] && (( $n > $limitn )) ) || [[ $unit =~ "Gbit/s" ]]
 then
-    echo -e "\n\n Net traffic average(tx|$t seconds) [current $n $unit] matches resource limit [$limitn $unit] \n\n Details:"
+    echo -e "\n\n Net traffic average(tx|$t seconds) current [$n $unit] matches resource limit [$limitn $unit] \n\n Details:"
     grep -E "(rx|tx)"  $log
     echo -e "\n See More: vnstat -l -ru || iftop -PB || nethogs \n"
     echo -e "\n Check Connections: /tmp/netstat.log \n"

@@ -11,9 +11,9 @@ news=$(comm -23 $now $ago)
 
 if [[ -n $news ]]
 then
+    echo -e "\n\n New sysinit script detected in \"/etc/init.d\" \n\n"
     for n in $news
     do
-        echo -e "\n\n New sys init script detected in \"/etc/init.d\" \n\n"
         ls -l /etc/init.d/$n
     done
     exit 1
