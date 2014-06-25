@@ -106,8 +106,8 @@ alias avsn='sudo aptitude versions'
 alias ain='sudo aptitude install'
 alias arm='sudo aptitude remove'
 alias apg='sudo aptitude purge'
-alias aup='sudo aptitude update'
-alias aupgd='sudo aptitude upgrade'
+alias aup='sudo apt-get update'
+alias aupgd='sudo apt-get upgrade'
 
 #debian dpkg
 alias dpl='sudo dpkg -l'
