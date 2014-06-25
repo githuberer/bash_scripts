@@ -1,0 +1,4 @@
+check program nettraffic with path /monit/script/nettraffic.sh
+        with timeout 30 seconds
+        if status != 0 for 3 cycles then alert
+

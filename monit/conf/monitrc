@@ -1,0 +1,55 @@
+set daemon 120
+
+set logfile /var/log/monit.log
+set idfile /var/lib/id
+set statefile /var/lib/state
+
+
+set eventqueue basedir /var/monit slots 1000
+
+#monit
+set mmonit http://testuser:testpasswordtestuser@192.168.1.1:8080/collector
+
+
+#httpd
+set httpd port 2812
+    #ssl enable
+    #pemfile /etc/monit.pem
+    allow localhost       
+    allow test:test
+    allow 192.168.1.0
+
+
+#mail server
+set mailserver smtp.gmail.com port 587
+    username "test@gmail.com" password "test" using tlsv1
+    with timeout 30 seconds
+
+
+#mail recipients
+#set alert test@test.cn
+set alert test@test.cn { action, nonexist, timeout, resource, icmp, connection }
+
+
+#mail format
+set mail-format {
+    subject: monit alert -- $EVENT | $HOST
+    message: 
+
+        $DESCRIPTION 
+
+        Action:   $ACTION 
+        Service:  $SERVICE 
+        Host:     $HOST
+        Date:     $DATE
+
+-------------
+send by monit
+}
+
+
+#include /etc/monit.d/*
+include /etc/monit.d/system
+include /etc/monit.d/app
+include /etc/monit.d/network
+include /etc/monit.d/nettraffic

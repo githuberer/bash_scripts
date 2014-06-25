@@ -1,0 +1,5 @@
+#ping & sshd
+#Shanghai
+check host test1 with address 192.168.1.1
+   if failed icmp type echo count 5 with timeout 30 seconds then alert
+   if failed port 22 protocol ssh with timeout 30 seconds for 10 cycles then alert

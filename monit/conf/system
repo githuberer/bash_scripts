@@ -1,0 +1,32 @@
+#partition spaces
+check filesystem dir/ with path /
+    if space usage > 90% then alert
+check filesystem dir/boot with path /boot
+    if space usage > 90% then alert
+check filesystem dir/tmp with path /tmp
+    if space usage > 90% then alert
+
+check filesystem dir/var with path /var
+    if space usage > 90% then alert
+check filesystem dir/var/log with path /var/log
+    if space usage > 90% then alert
+
+check filesystem dir/u with path /u
+    if space usage > 90% then alert
+check filesystem dir/u/backup with path /u/backup
+    if space usage > 90% then alert
+check filesystem dir/u/data with path /u/data
+    if space usage > 90% then alert
+
+#system perfromance
+check system test
+    #if loadavg (1min) > 8 for 3 cycles then alert
+    #if loadavg (5min) > 8 for 3 cycles then alert
+    if loadavg (15min) > 15 for 3 cycles then alert
+    if memory usage > 95% for 3 cycles then alert
+    if swap usage > 90% for 3 cycles then alert
+    if cpu usage (user) > 90% for 3 cycles then alert
+    if cpu usage (system) > 90% for 3 cycles then alert
+    if cpu usage (wait) > 90% for 3 cycles then alert
+
+
