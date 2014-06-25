@@ -111,8 +111,8 @@ alias aupgd='sudo aptitude upgrade'
 
 #debian dpkg
 alias dpl='sudo dpkg -l'
-alias din='sudo dpkg -i'
-alias drm='sudo dpkg -r'
+alias dpi='sudo dpkg -i'
+alias dpr='sudo dpkg -r'
 
 # colorized ri
 alias ri='ri -f ansi'
