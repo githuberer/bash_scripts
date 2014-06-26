@@ -32,7 +32,6 @@ then
     do
         ls -l /etc/init.d/$n
     done
-    echo -e "\n\n More: Validate the new sysinit with \"$__FILE__ update\". \n"
+    echo -e "\n\n More: Trust in the new sysinit and update snapshot with \"$__FILE__ update\". \n"
     exit 1
 fi
-
