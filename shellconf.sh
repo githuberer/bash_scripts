@@ -72,6 +72,8 @@ alias gcma='git commit -m -a'
 alias gckt='git checkout'
 
 # system admin
+alias sysv-rc-conf='sudo sysv-rc-conf'
+alias update-rc.d='sudo update-rc.d'
 alias reboot='sudo reboot'
 alias kill='sudo kill'
 alias ps='sudo ps'
