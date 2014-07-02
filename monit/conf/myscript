@@ -4,7 +4,7 @@ check program nettraffic with path /u/monit_script/nettraffic.sh
         #if status != 0 for 3 cycles then alert
         if status != 0 then exec "/u/monit_script/nettraffic.sh netstat"
 
-# /etc/init.d -- status
-check program sysinit with path /u/monit_script/sysinit.sh
+# dircontent-- status
+check program dircontent with path /u/monit_script/dircontent.sh
         with timeout 30 seconds
         if status != 0 then alert

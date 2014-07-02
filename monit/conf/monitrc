@@ -28,7 +28,7 @@ set mailserver smtp.gmail.com port 587
 
 #mail recipients
 #set alert test@test.cn
-set alert test@test.cn { action, nonexist, timeout, resource, icmp, connection }
+set alert test@test.cn { status, action, nonexist, timeout, resource, icmp, connection }
 
 
 #mail format
