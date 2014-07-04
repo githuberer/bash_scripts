@@ -31,9 +31,9 @@ func_gitall()
     echo -e "\n\n==============\ngit add -A . \n=============="
     git add -A .
 
-    echo -e "\n\n===============\ngit commit -a -m 'NULL'\n================"
-    #git commit -a -m "NULL"
-    git commit -m "NULL"
+    echo -e "\n\n===============\ngit commit -a -m 'nil'\n================"
+    #git commit -a -m "nil"
+    git commit -m "nil"
 
     echo -e "\n\n==============\ngit push\n=============="
     git push
