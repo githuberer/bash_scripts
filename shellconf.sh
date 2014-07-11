@@ -164,7 +164,7 @@ unset VIRHOME
 
 # auto switch to root
 #sudo -S echo -e "\n
-echo -e "\n>> Welcome aboard & Happy hacking, $(whoami) !!!\n"
+echo -e "\n \e[32m>> Welcome aboard & Happy hacking, $(whoami) !!!\e[0m \n"
 #>> Automatically type in password for using Terminal conveniently ......
 #" <<< 'ubuntu'
 #>> Automatically switch to 'root' user for using Terminal conveniently ......
