@@ -3,7 +3,8 @@
 ### zsh ########################################
 export ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="robbyrussell"
-plugins=(git rails)
+plugins=(git)
+#plugins=(git rails)
 source $ZSH/oh-my-zsh.sh
 
 
@@ -29,6 +30,9 @@ SCRIPT=$HOME/Dropbox/script
 
 ### alias #######################################
 
+
+# gem
+alias gem install='gem install --http-proxy --source http://rubygems.org'
 
 # rails
 alias rgc='rails generate controller'
