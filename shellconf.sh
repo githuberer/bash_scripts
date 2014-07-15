@@ -31,13 +31,6 @@ SCRIPT=$HOME/Dropbox/script
 ### alias #######################################
 
 
-# heroku
-#snail-heroku ()
-#{
-    #heroku --app dttsnail
-#}
-
-
 # gem
 alias gem install='gem install --http-proxy --source http://rubygems.org'
 
