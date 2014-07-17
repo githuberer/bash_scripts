@@ -72,11 +72,7 @@ alias gpl='git pull'
 alias gph='git push'
 alias gaa='git add -A .'
 alias gcm='git commit -m'
-gcma ()
-{
-    git commit -m -a $1 .
-}
-#alias gcma='git commit -m -a'
+alias gcma='git commit -m -a'
 alias gckt='git checkout'
 
 # system admin
