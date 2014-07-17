@@ -72,6 +72,8 @@ alias gpl='git pull'
 alias gph='git push'
 alias gaa='git add -A .'
 alias gcm='git commit -m'
+alias gaacm='git add -A . && git commit -m'
+alias gcma='git commit -m -a'
 alias gcma='git commit -m -a'
 alias gckt='git checkout'
 
