@@ -33,6 +33,7 @@ SCRIPT=$HOME/Dropbox/script
 
 # gem
 alias gem install='gem install --http-proxy --source http://rubygems.org'
+alias gem update='gem update --http-proxy --source http://rubygems.org'
 
 # rails
 alias rgc='rails generate controller'
