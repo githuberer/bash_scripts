@@ -1,1 +1,1 @@
-/home/wyy/Dropbox/script/func-ssh-mysql.sh
+/media/data/Dropbox/script/func-ssh-mysql.sh
