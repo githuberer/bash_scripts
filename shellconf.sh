@@ -155,12 +155,18 @@ man() {
 
 
 # for emacs prompt
-if [[ -n ${INSIDE_EMACS} ]]; then
+#if [[ -n ${INSIDE_EMACS} ]]; then
     # This shell runs inside an Emacs *shell*/*term* buffer.
-    prompt walters
-    unsetopt zle
-fi
-
+    #prompt walters
+    #unsetopt zle
+#fi
+#if [[ -n "$INSIDE_EMACS" ]]
+#then
+    #()
+    ##chpwd() { print -P "\033AnSiTc %d" }
+    #print -P "\033AnSiTu %n"
+    #print -P "\033AnSiTc %d"
+#fi
 
 __FILE__=$(readlink -f $0)
 VIRHOME=$(dirname $__FILE__)
