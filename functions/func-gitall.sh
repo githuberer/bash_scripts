@@ -10,10 +10,9 @@ func_gitall()
     git pull
 
     echo -e "\n\n==============\ngit add -A . \n=============="
-    git add -A .
+    git add .
 
     echo -e "\n\n==============\ngit commit -a -m \"$comment\"\n=============="
-    #git commit -a -m "$comment"
     git commit -m "$comment"
 
     echo -e "\n\n==============\ngit push\n=============="
@@ -29,10 +28,9 @@ func_gitall()
 
 
     echo -e "\n\n==============\ngit add -A . \n=============="
-    git add -A .
+    git add .
 
     echo -e "\n\n===============\ngit commit -a -m 'nil'\n================"
-    #git commit -a -m "nil"
     git commit -m "nil"
 
     echo -e "\n\n==============\ngit push\n=============="
