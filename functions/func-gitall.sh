@@ -9,11 +9,11 @@ func_gitall()
     #echo -e "\n\n==============\ngit pull\n=============="
     #git pull
 
-    echo -e "\n\n==============\ngit add -A . \n=============="
+    echo -e "\n\n==============\ngit add . \n=============="
     git add .
 
     echo -e "\n\n==============\ngit commit -a -m \"$comment\"\n=============="
-    git commit -m "$comment"
+    git commit -a -m "$comment"
 
     echo -e "\n\n==============\ngit push\n=============="
     git push
@@ -26,11 +26,11 @@ func_gitall()
     #echo -e "\n\n==============\ngit pull\n=============="
     #git pull
 
-    echo -e "\n\n==============\ngit add -A . \n=============="
+    echo -e "\n\n==============\ngit add . \n=============="
     git add .
 
     echo -e "\n\n===============\ngit commit -a -m 'nil'\n================"
-    git commit -m "nil"
+    git commit -a -m "nil"
 
     echo -e "\n\n==============\ngit push\n=============="
     git push
