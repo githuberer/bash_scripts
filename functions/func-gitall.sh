@@ -6,8 +6,8 @@ func_gitall()
 
   if [[ $# == 1 ]]
   then
-    echo -e "\n\n==============\ngit pull\n=============="
-    git pull
+    #echo -e "\n\n==============\ngit pull\n=============="
+    #git pull
 
     echo -e "\n\n==============\ngit add -A . \n=============="
     git add .
@@ -23,9 +23,8 @@ func_gitall()
 
   elif [[ $# == 0 ]]
   then
-    echo -e "\n\n==============\ngit pull\n=============="
-    git pull
-
+    #echo -e "\n\n==============\ngit pull\n=============="
+    #git pull
 
     echo -e "\n\n==============\ngit add -A . \n=============="
     git add .
