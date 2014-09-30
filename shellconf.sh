@@ -10,7 +10,6 @@ source $ZSH/oh-my-zsh.sh
 
 
 ### variables ###################################
-
 export TERM="xterm-256color"
 export PATH=$PATH:$HOME/Dropbox/script:/home/wyy/ruby_scripts/bin
 export MAIL=$HOME/mail/inbox
@@ -18,22 +17,23 @@ export EDITOR="vim"
 export VISUAL="vim"
 export CDPATH=$CDPATH:$HOME
 export HISTTIMEFORMAT='%F %T  '
-
 #export LC_ALL="en_US.UTF-8"
 #export LANG="en_US.UTF-8"
 #export LANGUAGE="en_US:en"
 #export LC_CTYPE=en_US.UTF-8
 #export LANG=en_US.UTF-8
-
 SCRIPT=$HOME/Dropbox/script
 
 
 ### alias #######################################
-
-
 # gem
 alias gem install='gem install --http-proxy --source http://rubygems.org'
+alias gin='gem install --http-proxy --source http://rubygems.org'
+alias gintao='gem install --http-proxy --source http://ruby.taobao.org'
+
 alias gem update='gem update --http-proxy --source http://rubygems.org'
+alias gup='gem update --http-proxy --source http://rubygems.org'
+alias guptao='gem update --http-proxy --source http://ruby.taobao.org'
 
 # rails
 alias rgc='rails generate controller'
@@ -68,15 +68,12 @@ rdevlog () #
 
 # git
 alias gal='func_gitall'
-alias gstt='git status'
 alias gpl='git pull'
 alias gph='git push'
-alias gaa='git add -A .'
+#alias gaa='git add -A .'
 alias gcm='git commit -m'
-alias gaacm='git add -A . && git commit -m'
-alias gcma='git commit -m -a'
-alias gcma='git commit -m -a'
-alias gckt='git checkout'
+alias gacm='git add . && git commit -m'
+alias gcma='git commit -a -m'
 
 # system admin
 alias find='sudo find'
@@ -153,41 +150,12 @@ man() {
     man "$@"
 }
 
-
-# for emacs prompt
-#if [[ -n ${INSIDE_EMACS} ]]; then
-    # This shell runs inside an Emacs *shell*/*term* buffer.
-    #prompt walters
-    #unsetopt zle
-#fi
-#if [[ -n "$INSIDE_EMACS" ]]
-#then
-    #()
-    ##chpwd() { print -P "\033AnSiTc %d" }
-    #print -P "\033AnSiTu %n"
-    #print -P "\033AnSiTc %d"
-#fi
-
 __FILE__=$(readlink -f $0)
 VIRHOME=$(dirname $__FILE__)
 . $HOME/.rvm/scripts/rvm
 . $VIRHOME/functions/func-gitall.sh
-. $VIRHOME/functions/func-ssh-mysql.sh
+#. $VIRHOME/functions/func-ssh-mysql.sh
 unset __FILE__
 unset VIRHOME
 
-
-#auto switch to root
-#sudo -S echo -e "\n
-#echo -e "\n >> Welcome aboard & Happy hacking, $(whoami) !!! \n"
-#echo -e "\n \e[32m>> Welcome aboard & Happy hacking, $(whoami) !!!\e[0m \n"
-#echo -e "\n \e[2m>> Welcome aboard & Happy hacking, $(whoami) !!!\e[0m \n"
 echo -e "\n \e[31m>> \e[32mWelcome \e[33maboard \e[34m& \e[35mHappy \e[36mhacking\e[35m, \e[95m$(whoami) \e[31m!!! \e[0m \n"
-
-#>> Automatically type in password for using Terminal conveniently ......
-#" <<< 'ubuntu'
-#>> Automatically switch to 'root' user for using Terminal conveniently ......
-#sudo su
-#exit
-
-
