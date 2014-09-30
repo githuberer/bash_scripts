@@ -26,11 +26,9 @@ SCRIPT=$HOME/Dropbox/script
 
 ### alias #######################################
 # gem
-alias gem install='gem install --http-proxy --source http://rubygems.org'
 alias gin='gem install --http-proxy --source http://rubygems.org'
 alias gintao='gem install --http-proxy --source http://ruby.taobao.org'
 
-alias gem update='gem update --http-proxy --source http://rubygems.org'
 alias gup='gem update --http-proxy --source http://rubygems.org'
 alias guptao='gem update --http-proxy --source http://ruby.taobao.org'
 
