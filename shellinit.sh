@@ -74,6 +74,7 @@ alias gph='git push'
 alias gcm='git commit -m'
 alias gacm='git add . && git commit -m'
 alias gcma='git commit -a -m'
+alias gdf='git diff'
 
 # system admin
 alias find='sudo find'
