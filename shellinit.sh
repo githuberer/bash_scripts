@@ -74,9 +74,10 @@ alias gph='git push'
 alias gcm='git commit -m'
 alias gacm='git add . && git commit -m'
 alias gcma='git commit -a -m'
-alias grst-shead-1='git reset --soft HEAD~1'
-alias grst-shead-2='git reset --soft HEAD~2'
-alias grst-shead-3='git reset --soft HEAD~3'
+alias grst-HEAD='git rest HEAD'
+alias grst-sHEAD-1='git reset --soft HEAD~1'
+alias grst-sHEAD-2='git reset --soft HEAD~2'
+alias grst-sHEAD-3='git reset --soft HEAD~3'
 
 # system admin
 alias find='sudo find'
