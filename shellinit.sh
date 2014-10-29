@@ -69,7 +69,7 @@ rdevlog () #
 # git
 alias gal='func_gitall'
 alias gpl='git pull'
-alias gph='git push'
+alias gps='git push'
 #alias gaa='git add -A .'
 alias gcm='git commit -m'
 alias gacm='git add . && git commit -m'
