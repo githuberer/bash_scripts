@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-func_gitall() 
+func_gitall()
 {
-  comment=$1 
+  comment=$1
 
   if [[ $# == 1 ]]
   then
@@ -12,8 +12,8 @@ func_gitall()
     echo -e "\n\n==============\ngit add --all \n=============="
     git add --all
 
-    echo -e "\n\n==============\ngit commit -a -m \"$comment\"\n=============="
-    git commit -a -m "$comment"
+    echo -e "\n\n==============\ngit commit -m \"$comment\"\n=============="
+    git commit -m "$comment"
 
     echo -e "\n\n==============\ngit push\n=============="
     git push
@@ -29,8 +29,8 @@ func_gitall()
     echo -e "\n\n==============\ngit add --all \n=============="
     git add --all
 
-    echo -e "\n\n===============\ngit commit -a -m 'nil'\n================"
-    git commit -a -m "nil"
+    echo -e "\n\n===============\ngit commit -m 'nil'\n================"
+    git commit -m "nil"
 
     echo -e "\n\n==============\ngit push\n=============="
     git push
