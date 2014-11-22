@@ -85,6 +85,7 @@ alias grsth-HEAD-2='git reset --hard HEAD~2'
 alias grsth-HEAD-3='git reset --hard HEAD~3'
 
 # system admin
+alias fdisk='sudo fdisk'
 alias srm='sudo rm'
 alias srm='sudo rm'
 alias find='sudo find'
