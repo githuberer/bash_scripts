@@ -3,7 +3,7 @@
 ### zsh ########################################
 export ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="robbyrussell"
-plugins=(git rails colored-man common-aliases dirhistory emoji-clock forklift frontend-search gitignore jump)
+plugins=(git rails colored-man)
 source $ZSH/oh-my-zsh.sh
 
 
