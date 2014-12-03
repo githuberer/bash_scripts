@@ -67,13 +67,15 @@ alias vroute='reroute'
 #}
 
 # git
+alias ga='git add'
+alias gd='git diff'
 alias gal='func_gitall'
 alias gpl='git pull'
 alias gps='git push'
 alias glon='git clone'
 alias gaa='git add --all'
 alias gcm='git commit -m'
-alias gacm='git add --all && git commit -m'
+alias gacm='git add --all; and git commit -m'
 alias gcma='git commit -a -m'
 alias grm='git rm'
 alias grst-HEAD='git reset HEAD'
@@ -146,7 +148,7 @@ alias sv='sudo vim'
 alias svim='sudo vim'
 
 #sudo last command
-alias slcmd='sudo ${history[${#history}]}'
+#alias slcmd='sudo ${history[${#history}]}'
 
 
 ### others ####################################
