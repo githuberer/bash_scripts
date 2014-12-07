@@ -3,7 +3,7 @@
 ### zsh ########################################
 export ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="robbyrussell"
-plugins=(git rails colored-man zsh-syntax-highlighting)
+plugins=(git rails colored-man zsh-syntax-highlighting zsh-history-substring-search)
 source $ZSH/oh-my-zsh.sh
 
 
@@ -170,5 +170,19 @@ VIRHOME=$(dirname $__FILE__)
 #. $VIRHOME/functions/func-ssh-mysql.sh
 unset __FILE__
 unset VIRHOME
+
+
+## git clone https://github.com/zsh-users/zsh-history-substring-search.git
+## zsh predict
+#autoload predict-on
+#autoload predict-off
+
+#zle -N predict-on
+#zle -N predict-off
+#bindkey '^X1' predict-on
+#bindkey '^X2' predict-off
+
+#predict-on
+
 
 echo -e "\n \e[31m>> \e[32mWelcome \e[33maboard \e[34m& \e[35mHappy \e[36mhacking\e[35m, \e[95m$(whoami) \e[31m!!! \e[0m \n"
