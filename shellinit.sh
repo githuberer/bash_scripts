@@ -3,7 +3,7 @@
 ### zsh ########################################
 export ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="robbyrussell"
-plugins=(git rails colored-man zsh-syntax-highlighting zsh-history-substring-search)
+plugins=(git rails colored-man aliases zsh-syntax-highlighting zsh-history-substring-search waga)
 source $ZSH/oh-my-zsh.sh
 
 
@@ -32,4 +32,3 @@ SCRIPT=$HOME/Dropbox/script
 
 #predict-on
 
-. $HOME/waga/zh-waga.zsh
